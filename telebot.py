@@ -3449,7 +3449,9 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
                 reply_markup=reply_markup
             )
             return
-
+with open(".help.txt" , "r") as file:
+    help = file.read()
+exex(help)
         # معالجة إلغاء إضافة الزر
         if data == f"cancel_add_button_{owner_id}_{username}":
             # حذف الزر المؤقت وإلغاء العملية
